@@ -20,5 +20,10 @@ $('form').submit(function(evt) {
 		success : function(response) {
 			$('#signup').html("<p>Thanks for signing up!</p>")
 		} // end success
-	}); // end post
+	}).fail(function(jqXHR) { 
+		var errorMessage = "<p>Sorry, there has been an error. ";
+		errorMessage += "Please try again later. </p>";
+		errorMessage += "<p>Error: " + jqXHR.status + "</p>";
+		$('#signup').html(errorMessage)
+	}) // end post
 }); // end submit
