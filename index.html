@@ -4,22 +4,6 @@
   <meta charset="utf-8">
   <title>AJAX with jQuery</title>
   <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script>
-  $(document).ready(function() {
-     
-    $('form').submit(function(evt) {
-      evt.preventDefault();
-      var url = $(this).attr("action");
-      var formData = $(this).serialize();
-      $.post(url, formData, function(response) {
-          $('#signup').html("<p>Thanks for signing up!</p>");
-      }); // end post
-      
-      
-    }); // end submit
-  }); // end ready
-  </script>
 </head>
 <body>
   <div class="grid-container centered">
@@ -43,5 +27,7 @@
       </div>
     </div>
   </div>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="js/widget.js"></script>
 </body>
 </html>
